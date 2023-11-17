@@ -15,4 +15,8 @@ export class HomePageComponent {
   goToContact() {
     this.router.navigateByUrl('/contact');
   }
+
+  goToAbout() {
+    this.router.navigateByUrl('/about');
+  }
 }
