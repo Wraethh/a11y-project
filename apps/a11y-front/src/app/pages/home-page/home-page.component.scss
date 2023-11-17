@@ -1,0 +1,122 @@
+.header {
+  height: 56px;
+  background-color: #069b8f;
+  color: aqua;
+  margin-bottom: 1in;
+
+  &__logo {
+    float:left;
+    padding: 10px;
+    font-size: 3em;
+    font-weight: bolder;
+  }
+
+  &__menu {
+    font-size: 24;
+    padding: 10px;
+
+    & > * {
+      padding: 10px 50px;
+      display:inline-block;
+      color: aquamarine;
+      text-decoration: none !important;
+    }
+  }
+}
+
+.section {
+
+  &__title {
+    font-size: 3em;
+    font-weight: bolder;
+    color: #069b8f;
+    margin-bottom: 1cm;
+    text-align: center;
+  }
+
+  &__content {
+    padding-bottom: 29mm;
+  }
+
+  &__left {
+    width: 50%;
+  }
+
+  &__right {
+    float:right;
+
+    img {
+      width: 250px;
+    }
+  }
+
+  .paragraph {
+    color: aliceblue;
+    font-size: 25px;
+    line-height: 40px;
+  }
+}
+
+.section--1 {
+  background-image: url("/assets/home-page-section-1-background.png");
+}
+
+.section--2 {
+  background-color: coral;
+
+  .section__content {
+    & > * {
+      display: inline-block;
+    }
+  }
+
+  .card {
+    width: 20%;
+    color: aliceblue;
+    margin: 10px;
+    border: 1px solid #069b8f;
+    border-radius: 10px;
+
+    &__header {
+      color: #069b8f;
+      text-align:center;
+      font-size: 20px;
+      font-weight: bold;
+      background-color: aliceblue;
+      padding: 10px;
+      border-radius: 10px 10px 0 0;
+    }
+
+    &__body {
+      padding: 10px;
+    }
+  }
+
+  .card--1 {
+    .card__body {
+      background-color: darkkhaki;
+    }
+  }
+
+  .card--2 {
+    .card__body {
+      background-color: lightpink;
+    }
+  }
+
+  .card--3 {
+    .card__body {
+      background-color: lightskyblue;
+    }
+  }
+
+  .card--4 {
+    .card__body {
+      background-color: lightyellow;
+    }
+  }
+
+  .placeholder {
+    width: 4%
+  }
+}
