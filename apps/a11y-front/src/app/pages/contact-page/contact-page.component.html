@@ -1,0 +1,26 @@
+<a href="/">&larr; Back</a>
+
+<h1> Contact us </h1>
+
+<div class="contact-text">
+  If you are so hype about our project and want to contact us, please fill the form below. (I did not write this text, Copilot did)
+</div>
+
+<div class="contact">
+
+  <form (ngSubmit)="onSubmit()" #contactForm="ngForm">
+    <div>Name: <input [(ngModel)]="data.name" name="name" required #name="ngModel" [ngClass]="{'error': name.invalid}" /></div>
+    <div>Age: <input [(ngModel)]="data.age" name="age" required pattern="[1-9][0-9]*"
+                     #age="ngModel" [ngClass]="{'error': age.invalid}"/></div>
+    <div>Phone number: <input [(ngModel)]="data.phoneNumber" name="phoneNumber" required pattern="\+[0-9]{11}"
+                              #phoneNumber="ngModel" [ngClass]="{'error': phoneNumber.invalid}"/></div>
+    <div>Email <input type="email" [(ngModel)]="data.email" name="email" required
+                      #email="ngModel" [ngClass]="{'error': email.invalid}"/></div>
+    <div>Message : <br/>
+    <textarea [(ngModel)]="data.message" name="message"></textarea>
+    </div>
+    @if (contactForm['form'].valid) {
+      <button type="submit" tabindex="1">Submit</button>
+    }
+  </form>
+</div>

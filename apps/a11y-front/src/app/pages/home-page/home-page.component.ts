@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import {Component, inject} from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {RouterLink} from "@angular/router";
+import {Router, RouterLink} from "@angular/router";
 
 @Component({
   selector: 'a11y-home-page',
@@ -9,4 +9,10 @@ import {RouterLink} from "@angular/router";
   templateUrl: './home-page.component.html',
   styleUrls: ['./home-page.component.scss'],
 })
-export class HomePageComponent {}
+export class HomePageComponent {
+  private router = inject(Router);
+
+  goToContact() {
+    this.router.navigateByUrl('/contact');
+  }
+}

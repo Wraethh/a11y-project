@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "a11y-b112e": {
+      "hosting": {
+        "a11y-front": [
+          "a11y-b112e"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "a11y-front"
+  }
+}

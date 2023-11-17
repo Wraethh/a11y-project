@@ -1,1 +1,19 @@
-{}
+{
+  "hosting": [
+    {
+      "target": "a11y-front",
+      "public": "dist/apps/a11y-front/browser",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    }
+  ]
+}

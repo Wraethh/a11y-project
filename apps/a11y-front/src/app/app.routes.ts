@@ -7,6 +7,10 @@ export const appRoutes: Route[] = [
     component: HomePageComponent
   },
   {
+    path: 'contact',
+    loadChildren: () => import('./pages/contact-page/contact.routes').then(m => m.contactRoutes)
+  },
+  {
     path: '**',
     redirectTo: '',
     pathMatch: 'full'

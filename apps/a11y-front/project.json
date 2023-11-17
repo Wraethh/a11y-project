@@ -92,6 +92,10 @@
       "options": {
         "jestConfig": "apps/a11y-front/jest.config.ts"
       }
+    },
+    "deploy": {
+      "executor": "@angular/fire:deploy",
+      "options": {}
     }
   }
 }
