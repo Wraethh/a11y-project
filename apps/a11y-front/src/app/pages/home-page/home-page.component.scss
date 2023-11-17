@@ -120,3 +120,44 @@
     width: 4%
   }
 }
+
+.testimony {
+  height: 300px;
+
+  &__image {
+    float:left;
+
+    img {
+      width: 250px;
+      border-radius: 125px;
+    }
+  }
+
+  &__quote {
+    padding: 100px 100px 0 300px;
+    font-size: 20px;
+  }
+
+  &__author {
+    padding: 100px 100px 0 300px;
+    text-align: right;
+    font-style: italic;
+    color: #ccc;
+  }
+}
+
+.gallery {
+  img {
+    width:100%;
+  }
+
+  .image__caption {
+    text-align:center;
+  }
+}
+
+.footer {
+  background-color: black;
+  color: #444;
+  text-align: center;
+}
