@@ -60,5 +60,6 @@
     "@nx/angular:component": {
       "style": "scss"
     }
-  }
+  },
+  "defaultProject": "a11y-front"
 }
