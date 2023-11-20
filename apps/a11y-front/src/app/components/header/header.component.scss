@@ -1,0 +1,25 @@
+.header {
+  height: 56px;
+  background-color: #069b8f;
+  color: aqua;
+  margin-bottom: 1in;
+
+  &__logo {
+    float:left;
+    padding: 10px;
+    font-size: 3em;
+    font-weight: bolder;
+  }
+
+  &__menu {
+    font-size: 24;
+    padding: 10px;
+
+    & > * {
+      padding: 10px 50px;
+      display:inline-block;
+      color: aquamarine;
+      text-decoration: none !important;
+    }
+  }
+}

@@ -3,6 +3,8 @@ import {CommonModule} from '@angular/common';
 import {FormsModule} from "@angular/forms";
 import {Auth, createUserWithEmailAndPassword} from "@angular/fire/auth";
 import {catchError, from, NEVER, take} from "rxjs";
+import {HeaderComponent} from "../../components/header/header.component";
+import {FooterComponent} from "../../components/footer/footer.component";
 
 export class RegisterModel {
   constructor(public password: string, public confirmPassword: string, public email: string) {
@@ -12,7 +14,7 @@ export class RegisterModel {
 @Component({
   selector: 'a11y-register-page',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, HeaderComponent, FooterComponent],
   templateUrl: './register-page.component.html',
   styleUrls: ['./register-page.component.scss'],
 })

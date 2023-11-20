@@ -1,26 +1,14 @@
-import {Component, inject} from '@angular/core';
-import { CommonModule } from '@angular/common';
-import {Router, RouterLink} from "@angular/router";
+import {Component} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {RouterLink} from "@angular/router";
+import {HeaderComponent} from "../../components/header/header.component";
 
 @Component({
   selector: 'a11y-home-page',
   standalone: true,
-  imports: [CommonModule, RouterLink],
+  imports: [CommonModule, RouterLink, HeaderComponent],
   templateUrl: './home-page.component.html',
   styleUrls: ['./home-page.component.scss'],
 })
 export class HomePageComponent {
-  private router = inject(Router);
-
-  goToContact() {
-    this.router.navigateByUrl('/contact');
-  }
-
-  goToAbout() {
-    this.router.navigateByUrl('/about');
-  }
-
-  goToRegister() {
-    this.router.navigateByUrl('/register');
-  }
 }
