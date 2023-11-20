@@ -1,6 +1,7 @@
 import {Component, inject} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {Router, RouterLink} from "@angular/router";
+import {AuthService} from "../../services/auth.service";
 
 @Component({
   selector: 'a11y-header',
@@ -11,6 +12,7 @@ import {Router, RouterLink} from "@angular/router";
 })
 export class HeaderComponent {
   private router = inject(Router);
+  authService = inject(AuthService);
 
   goToContact() {
     this.router.navigateByUrl('/contact');
@@ -26,5 +28,9 @@ export class HeaderComponent {
 
   goToLogin() {
     this.router.navigateByUrl('/login');
+  }
+
+  logout() {
+    this.authService.logout();
   }
 }

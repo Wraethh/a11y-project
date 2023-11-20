@@ -1,5 +1,5 @@
 <div class="header">
-  <div class="header__logo"> a11y Project </div>
+  <div class="header__logo"> a11y Project</div>
   <div class="header__menu">
     <a class="header__menu-link" routerLink="/">
       Home
@@ -13,11 +13,18 @@
     <a class="header__menu-link" routerLink="/lists">
       Lists
     </a>
-    <span class="header__menu-link" (click)="goToLogin()">
+    @if (!authService.isLoggedIn()) {
+      <span class="header__menu-link" (click)="goToLogin()">
       Login
     </span>
-    <span class="header__menu-link" (click)="goToRegister()">
+      <span class="header__menu-link" (click)="goToRegister()">
       Register
     </span>
+    } @else {
+      <span class="header__menu-link" (click)="logout()">
+      Logout
+    </span>
+    }
+
   </div>
 </div>
