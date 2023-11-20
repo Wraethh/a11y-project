@@ -22,7 +22,8 @@
         "inlineStyleLanguage": "scss",
         "assets": [
           "apps/a11y-front/src/favicon.ico",
-          "apps/a11y-front/src/assets"
+          "apps/a11y-front/src/assets",
+          "apps/a11y-front/src/robots.txt"
         ],
         "styles": [
           "apps/a11y-front/src/styles.scss"
