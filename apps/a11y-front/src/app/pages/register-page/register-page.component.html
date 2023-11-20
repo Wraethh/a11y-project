@@ -1,0 +1,28 @@
+<h1>Register</h1>
+
+<div class="register-form">
+  <form #registerForm="ngForm">
+    <div class="form-row">
+      <div class="label">
+        <label for="email">Email: </label>
+      </div>
+      <input type="email" [(ngModel)]="data.email" name="email" id="email" required/>
+    </div>
+    <div class="form-row">
+      <div class="label">
+        <label for="password">Password:</label>
+      </div>
+      <input type="password" [(ngModel)]="data.password" name="password" id="password" required/>
+    </div>
+    <div class="form-row">
+      <div class="label">
+        <label for="confirmPassword">Confirm Password:</label>
+      </div>
+      <input type="password" [(ngModel)]="data.confirmPassword" name="confirmPassword" id="confirmPassword" required (paste)="doNothing($event)"/>
+    </div>
+    <div class="form-row">
+      <button (click)="reset()">Reset</button>
+      <button (click)="register()" [disabled]="registerForm['form'].invalid">Register</button>
+    </div>
+  </form>
+</div>

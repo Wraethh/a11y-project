@@ -19,4 +19,8 @@ export class HomePageComponent {
   goToAbout() {
     this.router.navigateByUrl('/about');
   }
+
+  goToRegister() {
+    this.router.navigateByUrl('/register');
+  }
 }
