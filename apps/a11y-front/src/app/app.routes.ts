@@ -19,6 +19,10 @@ export const appRoutes: Route[] = [
     loadChildren: () => import('./pages/register-page/register.routes').then(m => m.registerRoutes)
   },
   {
+    path: 'login',
+    loadChildren: () => import('./pages/login-page/login.routes').then(m => m.loginRoutes)
+  },
+  {
     path: '**',
     redirectTo: '',
     pathMatch: 'full'
