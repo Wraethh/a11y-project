@@ -20,7 +20,7 @@
       <div class="label">
         <label for="confirmPassword">Confirm Password:</label>
       </div>
-      <input type="password" [(ngModel)]="data.confirmPassword" name="confirmPassword" id="confirmPassword" required (paste)="doNothing($event)"/>
+      <input type="password" [(ngModel)]="data.confirmPassword" name="confirmPassword" id="confirmPassword" required (paste)="doNothing($event)" onpaste="event.preventDefault()"/>
     </div>
     <div class="form-row">
       <button (click)="reset()">Reset</button>

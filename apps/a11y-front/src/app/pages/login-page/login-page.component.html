@@ -14,7 +14,7 @@
       <div class="label">
         <label for="pwd">Password:</label>
       </div>
-      <input type="password" [(ngModel)]="data.password" name="pwd" id="pwd" required (paste)="doNothing($event)"/>
+      <input type="password" [(ngModel)]="data.password" name="pwd" id="pwd" required (paste)="doNothing($event)" onpaste="event.preventDefault()"/>
     </div>
 
     <div class="form-row">
