@@ -1,0 +1,53 @@
+.newsletter {
+  position: fixed;
+  top: 20%;
+  bottom:20%;
+  left: 20%;
+  right: 20%;
+  background: aliceblue;
+  border: 3px dashed orangered;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+
+  &__inner {
+    position: relative;
+  }
+
+  &__close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+
+    border: 1px solid lightgray;
+    border-radius: 30px;
+    width: 20px;
+    height: 20px;
+    color: lightgray;
+    text-align:center;
+  }
+
+  &__title {
+    font-size: 40px;
+    text-align: center;
+    color: deeppink;
+    font-weight: bolder;
+  }
+
+  &__content {
+    padding: 10%;
+  }
+
+  &__text {
+    font-size: 20px;
+    padding: 20px 0;
+
+    &--small {
+      font-size: 8px;
+    }
+
+    &--red {
+      color: red;
+    }
+  }
+
+
+}

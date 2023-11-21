@@ -2,10 +2,11 @@ import {Component} from '@angular/core';
 import {RouterModule} from '@angular/router';
 import {TranslateService} from "@ngx-translate/core";
 import {en} from "./translations/en";
+import {NewsletterComponent} from "./components/newsletter/newsletter.component";
 
 @Component({
   standalone: true,
-  imports: [RouterModule],
+  imports: [RouterModule, NewsletterComponent],
   selector: 'a11y-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
@@ -15,6 +16,8 @@ export class AppComponent {
 
   constructor(private readonly translate: TranslateService) {
     this.manageTranslations();
+    this.getGeolocation();
+    this.setNotifications();
   }
 
   private manageTranslations() {
@@ -33,5 +36,22 @@ export class AppComponent {
         return;
       }
     }
+  }
+
+  private getGeolocation() {
+    if ("geolocation" in navigator) {
+      navigator.geolocation.getCurrentPosition((position) => {
+        // We will send this over later
+        // doSomething(position.coords.latitude, position.coords.longitude);
+      });
+    }
+  }
+
+  private setNotifications() {
+    Notification.requestPermission().then((permission) => {
+     if (permission === "granted") {
+       // To use later
+      }
+    });
   }
 }
