@@ -1,0 +1,27 @@
+<a11y-header></a11y-header>
+
+<div class="news">
+  <h1>News</h1>
+
+
+  <div class="news_items">
+    @for (news of (allNews$ | async); track news.id) {
+      <div class="news__item">
+        <div class="news__header">
+          <div class="news__date">{{news.date | date}}</div>
+          <h2><a [href]="'news/'+news.id"> {{news.title}}</a></h2>
+        </div>
+        <div class="news__content">
+          <p>{{news.description}}</p>
+        </div>
+      </div>
+    } @empty {
+      <div class="news_item">
+        <h2>No news</h2>
+      </div>
+    }
+  </div>
+</div>
+
+<a11y-footer></a11y-footer>
+

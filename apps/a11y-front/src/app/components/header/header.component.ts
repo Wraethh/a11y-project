@@ -30,7 +30,12 @@ export class HeaderComponent {
     this.router.navigateByUrl('/login');
   }
 
+  goToNews() {
+    this.router.navigateByUrl('/news');
+  }
+
   logout() {
     this.authService.logout();
   }
+
 }

@@ -10,6 +10,8 @@ import {NotAllowedLoggedInPageComponent} from "./pages/not-allowed-logged-in-pag
 import {
   NotAllowedLoggedOutPageComponent
 } from "./pages/not-allowed-logged-out-page/not-allowed-logged-out-page.component";
+import {NewsPageComponent} from "./pages/news-page/news-page.component";
+import {NewsDetailsPageComponent} from "./pages/news-details-page/news-details-page.component";
 
 export const appRoutes: Route[] = [
   {
@@ -38,6 +40,14 @@ export const appRoutes: Route[] = [
     path: 'lists',
     component: ListsPageComponent,
     canActivate: [mustBeLoggedInGuard]
+  },
+  {
+    path: 'news/:id',
+    component: NewsDetailsPageComponent
+  },
+  {
+    path: 'news',
+    component: NewsPageComponent
   },
   {
     path: '403-in',
