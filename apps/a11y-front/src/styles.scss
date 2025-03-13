@@ -1,7 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+html {
+  --primary-color-light: #c2f8f3;
+  --primary-color: #069B8F;
+  --primary-color-dark: #08635b;
+  --primary-color-darker: #0d403c;
+  --dark-color: #12191c;
+  --secondary-color: #FF7F50;
+  --secondary-color-dark: #c5633f;
+  --light-color: #ffe4c4;
+  --error-color: red;
+}
 
 body {
-  background-color: bisque;
+  background-color: var(--light-color);
+  color: var(--dark-color);
 }
 
 .float-left {

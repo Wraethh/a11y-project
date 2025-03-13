@@ -3,7 +3,7 @@
   &__title {
     font-size: 3em;
     font-weight: bolder;
-    color: #069b8f;
+    color: var(--primary-color);
     margin-bottom: 1cm;
     text-align: center;
   }
@@ -25,7 +25,7 @@
   }
 
   .paragraph {
-    color: aliceblue;
+    color: var(--primary-color-light);
     font-size: 25px;
     line-height: 40px;
   }
@@ -36,7 +36,7 @@
 }
 
 .section--2 {
-  background-color: coral;
+  background-color: var(--secondary-color);
 
   .section__content {
     & > * {
@@ -46,17 +46,17 @@
 
   .card {
     width: 20%;
-    color: aliceblue;
+    color: var(--light-color);
     margin: 10px;
-    border: 1px solid #069b8f;
+    border: 1px solid var(--primary-color);
     border-radius: 10px;
 
     &__header {
-      color: #069b8f;
+      color: var(--primary-color);
       text-align:center;
       font-size: 20px;
       font-weight: bold;
-      background-color: aliceblue;
+      background-color: var(--primary-color-light);
       padding: 10px;
       border-radius: 10px 10px 0 0;
     }

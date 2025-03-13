@@ -2,13 +2,13 @@
   padding: 30px 5%;
 
   &__item {
-    border: 1px solid orangered;
+    border: 1px solid var(--secondary-color);
     border-radius: 10px;
     margin-bottom: 20px;
   }
 
   &__header {
-    background: orangered;
+    background: var(--secondary-color);
     padding: 10px;
 
     h2 {
