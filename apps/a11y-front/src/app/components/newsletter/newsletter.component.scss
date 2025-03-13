@@ -4,8 +4,8 @@
   bottom:20%;
   left: 20%;
   right: 20%;
-  background: aliceblue;
-  border: 3px dashed orangered;
+  background: var(--primary-color-light);
+  border: 3px solid var(--dark-color);
   box-shadow: 0 10px 20px rgba(0,0,0,0.5);
 
   &__inner {
@@ -28,7 +28,6 @@
   &__title {
     font-size: 40px;
     text-align: center;
-    color: deeppink;
     font-weight: bolder;
   }
 
@@ -45,7 +44,7 @@
     }
 
     &--red {
-      color: red;
+      color: var(--error-color);
     }
   }
 
