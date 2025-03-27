@@ -1,33 +1,24 @@
 <div class="header">
-  <div class="header__logo"> a11y Project</div>
-  <div class="header__menu">
-    <a class="header__menu-link" routerLink="/">
-      Home
-    </a>
-    <span class="header__menu-link" (click)="goToAbout()">
-      About
-    </span>
-    <span class="header__menu-link" (click)="goToContact()">
-      Contact
-    </span>
-    <span class="header__menu-link" (click)="goToNews()">
-      News
-    </span>
-    <a class="header__menu-link" routerLink="/lists">
-      Lists
-    </a>
-    @if (!authService.isLoggedIn()) {
-      <span class="header__menu-link" (click)="goToLogin()">
-      Login
-    </span>
-      <span class="header__menu-link" (click)="goToRegister()">
-      Register
-    </span>
-    } @else {
-      <span class="header__menu-link" (click)="logout()">
-      Logout
-    </span>
-    }
+  <h1 class="header__logo">a11y Project</h1>
 
+  <button class="burger-menu" (click)="toggleMenu()">☰</button>
+
+  <div class="header__menu" [class.open]="menuOpen">
+    <nav>
+      <ul>
+        <li class="header__menu-link"><a routerLink="/">Home</a></li>
+        <li class="header__menu-link"><a routerLink="/about" (click)="toggleMenu()">About</a></li>
+        <li class="header__menu-link"><a routerLink="/contact" (click)="toggleMenu()">Contact</a></li>
+        <li class="header__menu-link"><a routerLink="/news" (click)="toggleMenu()">News</a></li>
+        <li class="header__menu-link"><a routerLink="/lists" (click)="toggleMenu()">Lists</a></li>
+
+        @if (!authService.isLoggedIn()) {
+        <li class="header__menu-link"><a (click)="goToLogin()">Login</a></li>
+        <li class="header__menu-link"><a (click)="goToRegister()">Register</a></li>
+        } @else {
+        <li class="header__menu-link"><a (click)="logout()">Logout</a></li>
+        }
+      </ul>
+    </nav>
   </div>
 </div>
