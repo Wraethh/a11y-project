@@ -11,15 +11,18 @@
   margin-bottom: 50px;
 }
 
-.label {
-  float:left;
+label {
+  float: left;
   min-width: 150px;
 }
+
 
 .form-row {
   height: 30px;
 
+
   &:last-child {
     text-align: center;
+
   }
 }
