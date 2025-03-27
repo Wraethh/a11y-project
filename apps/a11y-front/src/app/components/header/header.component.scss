@@ -1,25 +1,102 @@
 .header {
-  height: 56px;
+  position: relative;
+  height: 65px;
   background-color: #069b8f;
-  color: aqua;
-  margin-bottom: 1in;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
 
   &__logo {
-    float:left;
-    padding: 10px;
-    font-size: 3em;
-    font-weight: bolder;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+  }
+
+  .burger-menu {
+    display: none;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+
   }
 
   &__menu {
-    font-size: 24;
-    padding: 10px;
+    nav ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
 
-    & > * {
-      padding: 10px 50px;
-      display:inline-block;
-      color: aquamarine;
-      text-decoration: none !important;
+    li {
+      padding: 14px 16px;
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+
+      &:hover {
+
+
+        text-decoration: underline;
+
+      }
     }
   }
+
+  @media screen and (max-width: 767px) {
+    .burger-menu {
+      display: block;
+      font-size: 28px;
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+
+    .header__menu {
+      position: absolute;
+      top: 65px;
+      left: 0;
+      width: 100%;
+      background-color: #069b8f;
+
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+
+      transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    }
+
+    .header__menu.open {
+      display: flex;
+      visibility: visible;
+      opacity: 1;
+    }
+
+    nav ul {
+      flex-direction: column;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      padding: 10px;
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+    }
+  }
+
+
 }
