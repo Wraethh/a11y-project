@@ -5,16 +5,20 @@
 <div class="login-form">
   <form #registerForm="ngForm">
     <div class="form-row">
-      <div class="label">
-        <label for="text">Login: </label>
-      </div>
-      <input type="text" [(ngModel)]="data.email" name="text" id="text" required/>
+
+      <label for="text">Login:</label>
+      <input type="text" [(ngModel)]="data.email" name="text" id="text" required />
+
+
     </div>
     <div class="form-row">
-      <div class="label">
-        <label for="pwd">Password:</label>
-      </div>
-      <input type="password" [(ngModel)]="data.password" name="pwd" id="pwd" required (paste)="doNothing($event)" onpaste="event.preventDefault()"/>
+
+
+      <label for="pwd">Password:</label>
+      <input type="password" [(ngModel)]="data.password" name="pwd" id="pwd" required (paste)="doNothing($event)"
+        onpaste="event.preventDefault()" />
+
+
     </div>
 
     <div class="form-row">
