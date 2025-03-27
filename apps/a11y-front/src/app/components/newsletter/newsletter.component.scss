@@ -1,15 +1,16 @@
 .newsletter {
   position: fixed;
-  top: 20%;
-  bottom:20%;
-  left: 20%;
-  right: 20%;
+  top: 50%;
+  left: 50%;
+  max-width: 50svw;
+  transform: translate(-50%, -50%);
   background: var(--primary-color-light);
   border: 3px solid var(--dark-color);
   box-shadow: 0 10px 20px rgba(0,0,0,0.5);
 
   &__inner {
     position: relative;
+    padding: 2rem;
   }
 
   &__close {
@@ -27,19 +28,18 @@
   }
 
   &__title {
-    font-size: 40px;
+    font-size: 4rem;
     text-align: center;
     font-weight: bolder;
+    margin-block: 0;
   }
 
   &__content {
-    padding: 10%;
+    padding: 1rem;
   }
 
   &__text {
-    font-size: 20px;
-    padding: 20px 0;
+    font-size: 2rem;
+    padding-block: 1rem;
   }
-
-
 }

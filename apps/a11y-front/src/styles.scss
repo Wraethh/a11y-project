@@ -9,10 +9,16 @@ html {
   --secondary-color-dark: #c5633f;
   --light-color: #ffe4c4;
   --error-color: red;
+
+  font-size: 62.5%;
 }
 
 body {
   background-color: var(--light-color);
+
+  @media (max-width:720px) {
+    background-color: red;
+  }
   color: var(--dark-color);
 }
 

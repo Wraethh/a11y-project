@@ -1,7 +1,7 @@
-import {Component, signal} from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {timer} from "rxjs";
-import {FormsModule} from "@angular/forms";
+import { timer } from "rxjs";
+import { FormsModule } from "@angular/forms";
 
 @Component({
   selector: 'a11y-newsletter',
@@ -26,6 +26,6 @@ export class NewsletterComponent {
   }
 
   signIn() {
-    alert('Thank you for selling your soul to the devil!');
+    alert('Thank you for signing in!');
   }
 }

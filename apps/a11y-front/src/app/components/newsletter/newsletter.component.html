@@ -2,20 +2,19 @@
   <div class="newsletter">
     <div class="newsletter__inner">
       <button class="newsletter__close" (click)="close()">X</button>
-      <div class="newsletter__title">STAY TUNED</div>
+      <h2 class="newsletter__title">STAY TUNED</h2>
       <div class="newsletter__content">
-        <div class="newsletter__text">You do not want to miss our latest news!
+        <p class="newsletter__text">You do not want to miss our latest news!
           Give us your email address and you can be confident to get only the best content in your mailbox every single
           now and then.
-        </div>
+        </p>
 
-        <div class="newsletter__text">What are you waiting for ??? Sign in now !</div>
+        <p class="newsletter__text">What are you waiting for ? Sign in now !</p>
 
-        <div class="newsletter__form">
-          <form (ngSubmit)="signIn()" #newsletterForm="ngForm"></form>
+        <form (ngSubmit)="signIn()" #newsletterForm="ngForm" class="newsletter__form">
           <input class="newsletter__input" type="text" placeholder="Your email address" [(ngModel)]="email" required>
           <button class="newsletter__button" type="submit" [disabled]="newsletterForm['form'].invalid">Register!</button>
-        </div>
+        </form>
 
         <p class="newsletter__text">
           You can also recommend it to your friends, they'll love it !
