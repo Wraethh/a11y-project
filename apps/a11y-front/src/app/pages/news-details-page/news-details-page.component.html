@@ -1,19 +1,16 @@
 <a11y-header></a11y-header>
 @if (news$ | async;as news) {
 
-  <div class="news">
-    <h1>{{ news.title }}</h1>
-    <div class="news__date">{{ news.date | date }}</div>
+<div class="news">
+  <h1>{{ news.title }}</h1>
+  <div class="news__date">{{ news.date | date }}</div>
 
+  <div class="news__item">
 
-    <div class="news_items">
-      <div class="news__item">
-        <div class="news__content">
-          <p [innerHTML]="news.content"></p>
-        </div>
-      </div>
-    </div>
+    <p [innerHTML]="news.content"></p>
+
   </div>
+
+</div>
 }
 <a11y-footer></a11y-footer>
-

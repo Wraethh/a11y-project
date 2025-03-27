@@ -1,12 +1,13 @@
 .news {
   padding: 30px 5%;
+  font-size: 1.6rem;
 
   &__item {
     margin-bottom: 20px;
+    padding: 10px;
   }
 
   &__header {
-    background: orangered;
     padding: 10px;
 
     h2 {
@@ -18,7 +19,5 @@
     font-size: 11px;
   }
 
-  &__content {
-    padding: 10px;
-  }
+
 }
