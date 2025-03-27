@@ -7,6 +7,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 15px;
+  font-size: 1.6rem;
 
   &__logo {
     font-size: 30px;
@@ -21,8 +22,6 @@
     background: none;
     border: none;
     color: white;
-    cursor: pointer;
-
   }
 
   &__menu {
@@ -40,7 +39,8 @@
     a {
       text-decoration: none;
       color: white;
-
+      cursor: pointer;
+      
       &:hover {
 
 
