@@ -1,3 +1,21 @@
 .error {
   border:1px solid var(-error-color);
 }
+
+.contact-text {
+  font-size: 1.6rem;
+}
+
+.contact-form {
+  font-size: 1.6rem;
+  width: 50rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  place-items: center;
+
+  & label {
+    display: flex;
+    flex-direction: column;
+  }
+}

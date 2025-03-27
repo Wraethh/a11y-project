@@ -21,8 +21,11 @@ export class ContactPageComponent {
   router = inject(Router);
 
   onSubmit() {
-    alert('Thanks for your message!');
-    console.log('Sent with', JSON.stringify(this.data));
-    this.router.navigateByUrl('/');
+    if (this.data.name !== "" && this.data.age !== 0 && this.data.email !== "" && this.data.phoneNumber !== "" && this.data.message !== "") {
+      alert('Thanks for your message!');
+      console.log('Sent with', JSON.stringify(this.data));
+      this.router.navigateByUrl('/');
+    }
+    alert('Contact form is not completed correctly')
   }
 }
