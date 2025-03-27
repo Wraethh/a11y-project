@@ -1,5 +1,6 @@
 .news {
   padding: 30px 5%;
+  font-size: 1.6rem;
 
   &__item {
     border: 1px solid var(--secondary-color);
@@ -12,12 +13,13 @@
     padding: 10px;
 
     h2 {
+      color: white;
       margin: 0;
     }
   }
 
   &__date {
-    float:right;
+    float: right;
   }
 
   &__content {

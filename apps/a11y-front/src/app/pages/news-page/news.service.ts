@@ -1,7 +1,7 @@
-import {inject, Injectable} from "@angular/core";
-import {HttpClient} from "@angular/common/http";
-import {map, Observable, tap} from "rxjs";
-import {environment} from "../../../environments/environment";
+import { inject, Injectable } from "@angular/core";
+import { HttpClient } from "@angular/common/http";
+import { map, Observable, tap } from "rxjs";
+import { environment } from "../../../environments/environment";
 import * as showdown from 'showdown';
 
 interface NewsApiResponse {
@@ -14,7 +14,7 @@ interface NewsDetailsApiResponse {
 
 interface NewsResponse {
   id: string;
-  attributes: { Title: string, Description: string, Content: string, publishedAt: string}
+  attributes: { Title: string, Description: string, Content: string, publishedAt: string }
 }
 
 export interface News {
@@ -51,16 +51,22 @@ export class NewsService {
   getNewsById(id: string): Observable<News> {
     return this.httpClient
       .get<NewsDetailsApiResponse>(`${environment.blog.url}/blogs/${id}`, {
-        headers : {
+        headers: {
           'Content-Type': 'application/json',
           'Authorization': `Bearer ${environment.blog.token}`
         }
       }).pipe(map(r => {
         const converter = new showdown.Converter();
-        return {id: r.data.id, title: r.data.attributes.Title,
+
+        return {
+          id: r.data.id, title: r.data.attributes.Title,
           description: r.data.attributes.Description,
-          content: converter.makeHtml(r.data.attributes.Content),
-          date: r.data.attributes.publishedAt}
+          content: converter.makeHtml(r.data.attributes.Content)
+            .replace(/<h3/g, '<h4')
+            .replace(/<h2/g, '<h3')
+            .replace(/<h1/g, '<h2'),
+          date: r.data.attributes.publishedAt
+        }
       }));
 
   }
