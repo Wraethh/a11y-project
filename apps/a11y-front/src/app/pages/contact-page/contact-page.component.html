@@ -7,31 +7,32 @@
 <p class="contact-text">
   If you are hype about our project and want to contact us, please fill the form below :
 </p>
+<p class="required-inf">* = required information</p>
 
 <form (ngSubmit)="onSubmit()" #contactForm="ngForm" class="contact-form">
   <label for="name">
-    Name :
-    <input type="text" name="name" required [ngClass]="{'error': name.invalid}" [(ngModel)]="data.name" #name="ngModel" />
+    Name *
+    <input type="text" name="name" required [ngClass]="{'error': name.invalid}" [(ngModel)]="data.name" #name="ngModel" placeholder="Bob" />
   </label>
   
   <label for="age">
-    Age :
-    <input [(ngModel)]="data.age" name="age" required pattern="^(?:[1-9]?[0-9]|1[012][0-9])$" #age="ngModel" [ngClass]="{'error': age.invalid}" />
+    Age *
+    <input [(ngModel)]="data.age" name="age" required pattern="^(?:[1-9]?[0-9]|1[012][0-9])$" #age="ngModel" [ngClass]="{'error': age.invalid}" placeholder="68" />
   </label>
 
   <label for="phoneNumber">
-    Phone number :
-    <input [(ngModel)]="data.phoneNumber" name="phoneNumber" required pattern="^0[67](?:\s\d{2}){4}$" #phoneNumber="ngModel" [ngClass]="{'error': phoneNumber.invalid}" />
+    Phone number *
+    <input [(ngModel)]="data.phoneNumber" name="phoneNumber" required pattern="^0[67](?:\s\d{2}){4}$" #phoneNumber="ngModel" [ngClass]="{'error': phoneNumber.invalid}" placeholder="06 66 42 06 90"/>
   </label>
 
   <label for="email">
-    Email :
-    <input type="email" [(ngModel)]="data.email" name="email" required #email="ngModel" [ngClass]="{'error': email.invalid}" />
+    Email *
+    <input type="email" [(ngModel)]="data.email" name="email" required #email="ngModel" [ngClass]="{'error': email.invalid}" placeholder="bob@compta.fr" />
   </label>
 
-  <label for="message">
-    Message :
-    <textarea [(ngModel)]="data.message" name="message"></textarea>
+  <label for="message"  class="message">
+    Message *
+    <textarea [(ngModel)]="data.message" name="message" placeholder="Hello, I'd like to know more about a11y..." rows="5"></textarea>
   </label>
   
   <button type="submit">Submit</button>

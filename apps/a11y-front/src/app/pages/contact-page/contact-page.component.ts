@@ -26,6 +26,6 @@ export class ContactPageComponent {
       console.log('Sent with', JSON.stringify(this.data));
       this.router.navigateByUrl('/');
     }
-    alert('Contact form is not completed correctly')
+    alert('Please complete all the required informations')
   }
 }
