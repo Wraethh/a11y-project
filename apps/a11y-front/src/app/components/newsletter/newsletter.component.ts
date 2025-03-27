@@ -15,12 +15,6 @@ export class NewsletterComponent {
   show = false;
   email = '';
 
-  constructor() {
-    timer(5000).subscribe(() => {
-      this.show = true;
-    });
-  }
-
   close() {
     this.show = false;
   }
