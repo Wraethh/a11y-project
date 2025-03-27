@@ -10,6 +10,9 @@
 
   &__content {
     padding-bottom: 29mm;
+    font-size: 1.6rem;
+
+
   }
 
   &__left {
@@ -17,7 +20,7 @@
   }
 
   &__right {
-    float:right;
+    float: right;
 
     img {
       width: 250px;
@@ -39,21 +42,21 @@
   background-color: var(--secondary-color);
 
   .section__content {
-    & > * {
+    &>* {
       display: inline-block;
     }
   }
 
   .card {
     width: 20%;
-    color: var(--light-color);
+    color: black;
     margin: 10px;
     border: 1px solid var(--primary-color);
     border-radius: 10px;
 
     &__header {
       color: var(--primary-color);
-      text-align:center;
+      text-align: center;
       font-size: 20px;
       font-weight: bold;
       background-color: var(--primary-color-light);
@@ -99,7 +102,7 @@
   height: 300px;
 
   &__image {
-    float:left;
+    float: left;
 
     img {
       width: 250px;
@@ -122,10 +125,10 @@
 
 .gallery {
   img {
-    width:100%;
+    width: 100%;
   }
 
   .image__caption {
-    text-align:center;
+    text-align: center;
   }
 }
